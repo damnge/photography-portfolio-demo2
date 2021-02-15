@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tony Snufkin</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/modal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link rel="icon" type="image/png" href="eye1.png">
+</head>
+<body>
+  
+<section id="page-container">
+  <header class="navbar">
+    <a href="index.html">
+      <img src="LOGO.svg" href alt="logo" class="main-logo animate__animated animate__fadeIn">
+    </a>
+
+      <label class="nav" for="toggle">
+        <div id="nav-icon3">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+        <input type="checkbox" id="toggle">
+        <div class="menu dropdown-content button-group filter-button-group">
+        <p class="portfolio">Portfolio</p>
+       
+        <button onclick='myAnalog();' data-filter=".analog" class="my-analog" id="myBtn6">Film</button>
+        <div class="dropdown-content analog-drop animate__animated animate__fadeInLeft animate__delay-0.1s">
+          <a href="#"><button class="bt1" onclick='myAnalog();' data-filter=".au">AUSTRALIA</button></a>
+          <a href="#"><button class="bt2" onclick='myAnalog();'  data-filter=".isk">ICELAND</button></a>
+          <a href="#"><button class="bt3" onclick='myAnalog();' data-filter=".uk">UKRAINE</button></a>
+        </div>
+        <a href="#"><button onclick='myStreet();' data-filter=".street" id="myBtn1">Street</button></a>
+        <a href="#"><button onclick='myDocument()' data-filter=".document" id="myBtn8">Reportage</button></a>
+        <a href="#"><button onclick='myAll();' data-filter="*" id="myBtn5">All Photos </button></a>
+        <a href="indexcontact.html" class="contact-link">Contact</a>
+        <a class="insta" href="https://www.instagram.com/tonysnufkin/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </label>
+
+  </header>
+  <nav class="sidebar" id="myTopnav">
+ 	<div id="myLinks">
+    
+      <button class="dropbtn-portfolio">Portfolio</button>
+      <div class="dropdown-content button-group filter-button-group">
+        <a href="#"><button onclick='myAnalog(); window.onbeforeunload();' data-filter=".analog" id="myBtn3" class="my-analog">Film</button></a>
+        <div class="dropdown-content analog-drop animate__animated animate__fadeInLeft animate__delay-0.1s">
+          <button class="bt1" onclick='myAnalog(); window.onbeforeunload();' data-filter=".au">AUSTRALIA</button>
+          <button class="bt2" onclick='myAnalog(); window.onbeforeunload();'  data-filter=".isk">ICELAND</button>
+          <button class="bt3" onclick='myAnalog(); window.onbeforeunload();' data-filter=".uk">UKRAINE</button>
+        </div>
+        <a href="#"><button onclick='myStreet(); window.onbeforeunload();' data-filter=".street" id="myBtn1">Street</button></a>
+        <a href="#"><button onclick='myDocument(); window.onbeforeunload();' data-filter=".document" id="myBtn4">Reportage</button></a>
+        <a href="#"><button onclick='myAll(); window.onbeforeunload();' data-filter="*" id="myBtn5">All Photos</button></a>
+      </div>
+    
+  <a href="indexcontact.html" class="contact-link">Contact</a>
+  <a class="insta" href="https://www.instagram.com/tonysnufkin/"><i class="fab fa-instagram"></i></a>
+  </div>
+  
+  </nav>
+
+  <div class="sign"><p>©Tony Snufkin</p></div>
+
+  <section id="content">
+    <article class="grid-item street" id="myTitle">
+      <h2 id="dtitle"></h2>
+      <p id="description"></p>
+    </article>    
+  <div id="gallery-container">
+         
+  
+  <div class="row">  <!-- this gallery is made with flex and 4 rows -->
+   
+   <!-- ------------ STREET ------------- -->
+   <!-- 1 -->
+  <div class="column grid"> 
+    <img src="img/thumbs/1.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(1)">
+    <img src="img/thumbs/2.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(2)">
+    <img src="img/thumbs/3.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(3)">
+    <img src="img/thumbs/4.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(4)">
+    <img src="img/thumbs/5.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(5)">
+    <img src="img/thumbs/6.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(6)">
+    <img src="img/thumbs/7.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(7)">
+    <img src="img/thumbs/8.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(8)">
+    
+  </div>
+   <!-- 2 -->
+  <div class="column grid">
+    <img src="img/thumbs/9.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(9)">
+    <img src="img/thumbs/10.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(10)">
+    <img src="img/thumbs/11.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(11)">
+    <img src="img/thumbs/12.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(12)">
+    <img src="img/thumbs/13.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(13)">
+    <img src="img/thumbs/14.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(14)">
+    <img src="img/thumbs/15.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(15)">
+    <img src="img/thumbs/16.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(16)">
+    <img src="img/thumbs/17.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(17)">
+  </div> 
+    <!-- 3 -->
+  <div class="column grid">
+    <img src="img/thumbs/18.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(18)">
+    <img src="img/thumbs/19.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(19)">
+    <img src="img/thumbs/20.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(20)">
+    <img src="img/thumbs/21.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(21)">
+    <img src="img/thumbs/22.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(22)">
+    <img src="img/thumbs/23.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(23)">
+    <img src="img/thumbs/24.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(24)">
+    <img src="img/thumbs/25.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(25)">
+    <img src="img/thumbs/26.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(26)">
+  </div>
+   <!-- 4 -->
+  <div class="column grid">
+    <img src="img/thumbs/27.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(27)">
+    <img src="img/thumbs/28.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(28)">
+    <img src="img/thumbs/29.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(29)">
+    <img src="img/thumbs/30.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(30)">
+    <img src="img/thumbs/31.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(31)">
+    <img src="img/thumbs/32.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(32)">
+    <img src="img/thumbs/33.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(33)">
+    <img src="img/thumbs/34.jpg" class="grid-item street show-on-scroll inline-photo" onclick="openModal();currentSlide(34)">
+  </div>
+
+  <!-- this gallery is made with flex and 2 rows -->
+  <!-- ------------ ANALOG  ------------- -->
+
+  <!-- AUSTRALIA -->
+  <!-- ---- 1 COLUMN ----- -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/a1-min.jpg" class="grid-item analog au show-on-scroll inline-photo entrance" onclick="openModal();currentSlide(35)">
+    <img src="img/thumbs/a4-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(38)">
+    <img src="img/thumbs/a6-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(40)">
+    <img src="img/thumbs/a8-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(42)">
+    <img src="img/thumbs/a10-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(44)">
+    <img src="img/thumbs/a12-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(46)">
+    <img src="img/thumbs/a14-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(48)"> 
+  </div> 
+
+ <!-- ---- 2 COLUMN ----- -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/a2-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(36)">
+    <img src="img/thumbs/a3-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(37)">
+    <img src="img/thumbs/a5-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(39)">
+    <img src="img/thumbs/a7-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(41)">
+    <img src="img/thumbs/a9-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(43)">
+    <img src="img/thumbs/a11-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(45)">
+    <img src="img/thumbs/a13-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(47)">
+    <img src="img/thumbs/a15-min.jpg" class="grid-item analog au show-on-scroll inline-photo" onclick="openModal();currentSlide(49)">
+  </div> 
+
+<!-- --------- ICELAND------ -->
+<!-- ---- 1 COLUMN ----- -->
+  <div class="column-landscape grid">
+    <img src="img/thumbs/i1-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(50)">
+    <img src="img/thumbs/i3-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(52)">
+    <img src="img/thumbs/i5-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(54)">
+    <img src="img/thumbs/i40-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(56)">
+    <img src="img/thumbs/i70-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(58)">
+    <img src="img/thumbs/i7-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(60)">
+    <img src="img/thumbs/i9-min.JPG" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(62)">
+    <img src="img/thumbs/i11-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(64)">
+    <img src="img/thumbs/i13-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(66)">
+    <img src="img/thumbs/i15-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(68)">
+    <img src="img/thumbs/i17-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(70)">
+    <img src="img/thumbs/i21-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(72)">
+  </div> 
+  
+  <!-- -----2----- -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/i2-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(51)">
+    <img src="img/thumbs/i4-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(53)">
+    <img src="img/thumbs/i6-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(55)">
+    <img src="img/thumbs/i50-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(57)">
+    <img src="img/thumbs/i80-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(59)">
+    <img src="img/thumbs/i8-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(61)">
+    <img src="img/thumbs/i10-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(63)">
+    <img src="img/thumbs/i12-min.JPG" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(65)">
+    <img src="img/thumbs/i14-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(67)">
+    <img src="img/thumbs/i16-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(69)">
+    <img src="img/thumbs/i18-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(71)">
+    <img src="img/thumbs/i22-min.jpg" class="grid-item analog isk show-on-scroll inline-photo" onclick="openModal();currentSlide(73)">
+  </div> 
+
+  <!-- ----UKRAINE---- -->
+  <!-- ---- 1 COLUMN ----- -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/u1-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(74)">
+    <img src="img/thumbs/u3-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(76)">
+    <img src="img/thumbs/u5-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(78)">
+    <img src="img/thumbs/u7-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(80)">
+    <img src="img/thumbs/u9-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(82)">
+    <img src="img/thumbs/u11-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(84)">
+    <img src="img/thumbs/u13-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(86)">
+    <img src="img/thumbs/u15-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(88)">
+  </div> 
+
+  <!-- ---- 2 COLUMN ----- -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/u2-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(75)">
+    <img src="img/thumbs/u4-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(77)">
+    <img src="img/thumbs/u6-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(79)">
+    <img src="img/thumbs/u8-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(81)">
+    <img src="img/thumbs/u10-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(83)">
+    <img src="img/thumbs/u12-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(85)">
+    <img src="img/thumbs/u14-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(87)">
+    <img src="img/thumbs/u16-min.jpg" class="grid-item analog uk show-on-scroll inline-photo" onclick="openModal();currentSlide(89)">
+  </div> 
+
+
+  <!-- ------------ DOCUMENT------------- -->
+
+  <!-- 1 -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/0d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(90)">
+    <img src="img/thumbs/2d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(92)">
+    <img src="img/thumbs/4d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(94)">
+    <img src="img/thumbs/6d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(96)">
+    <img src="img/thumbs/8d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(98)">
+    <img src="img/thumbs/10d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(100)">
+    <img src="img/thumbs/12d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(102)">
+    
+  </div> 
+
+  <!-- 2 -->
+
+  <div class="column-landscape grid">
+    <img src="img/thumbs/1d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(91)">
+    <img src="img/thumbs/3d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(93)">
+    <img src="img/thumbs/5d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(95)">
+    <img src="img/thumbs/7d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(97)">
+    <img src="img/thumbs/9d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(99)">
+    <img src="img/thumbs/11d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(101)">
+    <img src="img/thumbs/13d.jpg" class="grid-item document show-on-scroll inline-photo" onclick="openModal();currentSlide(103)">
+    
+  </div> 
+
+   
+  </div>    <!-- <---- closing div of the row -->
+
+  
+  </div>       <!-- --------- closing div of gallery-container -->
+
+</section> <!-- closing content div -->
+
+  
+  <footer class="footer">
+	<div class="info">
+  <p class="copy">©Tony Snufkin</p>
+  </div>
+  </footer>
+
+</section>
+
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides portrait">
+      <img src="img/full/1.jpg">
+    </div> 
+    <div class="mySlides landscape">
+      <img src="img/full/2.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/3.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/4.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/5.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/6.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/7.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/8.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/9.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/10.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/11.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/12.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/13.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/14.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/15.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/16.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/17.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/18.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/19.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/20.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/21.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/22.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/23.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/24.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/25.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/26.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/27.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/28.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/29.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/30.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/31.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/32.jpg">
+    </div>
+    <div class="mySlides portrait">
+      <img src="img/full/33.jpg">
+    </div>
+    <div class="mySlides landscape">
+      <img src="img/full/34.jpg">
+    </div>
+  <!-- -------ANALOG------- -->
+  <!-- -----AUSTRALIA----- -->
+
+<div class="mySlides portrait">
+  <img src="img/full/a1.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a2.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a3.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a4.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a5.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a6.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a7.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a8.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a9.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a10.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a11.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a12.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a13.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a14.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/a15.jpg">
+</div>
+<!-- -----ICELAND----- -->
+<div class="mySlides landscape">
+  <img src="img/full/i1.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i2.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i3.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i4.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i5.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i6.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i7.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i8.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i9.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i10.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i11.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i12.JPG">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i13.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i14.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i15.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i16.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i17.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i18.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i21.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/i22.jpg">
+</div>
+<!-- -----UKRAINE----- -->
+
+<div class="mySlides landscape">
+  <img src="img/full/u1.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u2.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u3.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u4.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u5.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u6.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u7.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u8.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u9.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u10.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u11.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u12.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u13.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u14.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u15.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/u16.jpg">
+</div>
+
+
+<!-- -------DOCUMENT------- -->
+
+<div class="mySlides landscape">
+  <img src="img/full/0d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/1d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/2d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/3d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/4d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/5d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/6d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/7d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/8d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/9d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/10d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/11d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/12d.jpg">
+</div>
+<div class="mySlides landscape">
+  <img src="img/full/13d.jpg">
+</div>
+
+    <div class="slider">
+    <a class="prev" onclick="plusSlides(-1)" onkeypress(37)="">Prev</a>
+    <p>/</p>
+    <a class="next" onclick="plusSlides(1)">Next</a>
+    </div>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    </div>
+</div>
+
+    <div class="loader" id="loader">
+      <img src="loader2.svg" alt="loading">
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.3/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+<script src="javascripts/show-on-scroll.js"></script>
+<script src="javascripts/scroll-starts-top.js"></script>
+<script src="javascripts/arrow-keys.js"></script>
+<script src="javascripts/drop-down.js"></script>
+<script src="javascripts/description.js"></script>
+<script src="javascripts/loader.js"></script>
+<script src="javascripts/modal.js"></script>
+<script src="javascripts/hamburger.js"></script>
+<script src="javascripts/filter.js"></script>
+<script src="javascripts/resize.js"></script>
+
+</body>
+</html>
